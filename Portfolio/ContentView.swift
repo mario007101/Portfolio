@@ -1,14 +1,8 @@
-//
-//  ContentView.swift
-//  Portfolio
-//
-//  Created by Mário Markovič on 07/06/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         ZStack{
             
             Image("space")
@@ -18,12 +12,15 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
-                Text("Mário Markovič")
-                    .font(.title2)
-                    .fontDesign(.monospaced)
-                    .bold()
-                    .transparentText(color: .gray, lineWidth: 3)
+                ScrollView {
+                    Text("Mário Markovič")
+                        .bold()
+                        .transparentText(color: .teal, lineWidth: 3)
+                        .mask(Color.white.opacity(0.7))
+                        .font(.system(size: 55))
+                }
             }
+            .frame(maxHeight: .infinity, alignment: .top)
             .padding(.vertical)
         }
     }
