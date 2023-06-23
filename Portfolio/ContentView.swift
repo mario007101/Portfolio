@@ -18,11 +18,11 @@ struct ContentView: View {
                                 .padding(.horizontal, -170)
                             
                             InformationAbout()
+                                .padding(.top, 2)
                                 
                         }
                     }
                 .frame(maxHeight: .infinity, alignment: .center)
-                .border(.pink)
             }
         }
     }
