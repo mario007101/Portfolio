@@ -25,31 +25,49 @@ struct ContentView: View {
                         InformationAbout()
                             .padding(.top, -30)
                         
-                        //Container for hexagon
+                        //Container for hexagon shadows
                         HStack{
+                            HexagonShape()
                             HexagonShape()
                             HexagonShape()
                                 .rotationEffect(.degrees(30))
                             HexagonShape()
                             HexagonShape()
-                            HexagonShape()
+                                .rotationEffect(.degrees(30))
+                                
                         }
 
                         HStack{
                             Image("Csharp_logo")
                                 .resizable()
                                 .frame(width: 60, height: 60)
+                            Image("C_logo")
+                                .resizable()
+                                .frame(width: 60, height: 60)
                             Image("swift_logo")
                                 .resizable()
                                 .clipShape(Hexagon())
-                                .frame(width: 58, height: 58)
-                            
+                                .frame(width: 60, height: 60)
+                            Image("html_logo")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                            //Plus in a hexagon
+                            Path { path in
+                                path.move(to: CGPoint(x: 5, y: 20))
+                                path.addLine(to: CGPoint(x: 35, y: 20))
+                                path.move(to: CGPoint(x: 20, y: 35))
+                                path.addLine(to: CGPoint(x: 20, y: 5))
+                            }
+                            .stroke(Color.white, lineWidth: 4)
+                            .position(x: 23, y: 280)
+
 
 
 
                         }
-                        .frame(width: 300, height: 300)
+                        .frame(width: 300, height: 300, alignment: .leading)
                         .padding(.top, -189)
+                        .padding(.leading, -30)
                     }
                 }
             .frame(maxHeight: .infinity, alignment: .center)
