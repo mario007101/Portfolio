@@ -29,10 +29,27 @@ struct ContentView: View {
                         HStack{
                             HexagonShape()
                             HexagonShape()
+                                .rotationEffect(.degrees(30))
                             HexagonShape()
                             HexagonShape()
                             HexagonShape()
                         }
+
+                        HStack{
+                            Image("Csharp_logo")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                            Image("swift_logo")
+                                .resizable()
+                                .clipShape(Hexagon())
+                                .frame(width: 58, height: 58)
+                            
+
+
+
+                        }
+                        .frame(width: 300, height: 300)
+                        .padding(.top, -189)
                     }
                 }
             .frame(maxHeight: .infinity, alignment: .center)

@@ -12,6 +12,7 @@ struct HexagonShape: View {
         Hexagon()
             .frame(width: 60, height: 60)
             .opacity(0.4)
+            .rotationEffect(.degrees(30))
     }
 }
 
