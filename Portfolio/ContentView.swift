@@ -25,6 +25,14 @@ struct ContentView: View {
                         InformationAbout()
                             .padding(.top, -30)
                         
+                        //Container for hexagon
+                        HStack{
+                            HexagonShape()
+                            HexagonShape()
+                            HexagonShape()
+                            HexagonShape()
+                            HexagonShape()
+                        }
                     }
                 }
             .frame(maxHeight: .infinity, alignment: .center)
@@ -51,7 +59,6 @@ struct ContentView: View {
                         .padding(.leading, 300)
                         .padding(.top, -468)
                 }
-                .border(.pink)
             }
         }
     }
