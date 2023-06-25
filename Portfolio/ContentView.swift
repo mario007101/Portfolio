@@ -64,22 +64,28 @@ struct ContentView: View {
                             }
                             .stroke(Color.white, lineWidth: 4)
                             
-                            //White line on the right side
+                            //Path for the line on the right side
                             Path { path in
-                                
-                                //Drawed circles
-                                var positionOfCircles = 220
-                                
                                 path.move(to: CGPoint(x: 50, y: 220))
                                 path.addLine(to: CGPoint(x: 50, y: 575))
                                 path.closeSubpath()
                                 
+                            }
+                            .stroke(Color.white, lineWidth: 4)
+                            
+                            //Path for drawed circles on the line
+                            let pathForCircles = Path { path in
+                                
+                                var positionOfCircles = 220
+                                
                                 for _ in 0..<8 {
-                                    path.addArc(center: CGPoint(x: 50, y: positionOfCircles), radius: 5, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
+                                    path.addArc(center: CGPoint(x: 38, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
                                     positionOfCircles += 50
                                 }
                             }
-                            .stroke(Color.white, lineWidth: 4)
+                            pathForCircles.fill(Color.yellow).overlay(pathForCircles.stroke(Color.black, lineWidth: 3))
+
+                            
                             
                         }
                         .frame(width: 300, height: 300, alignment: .leading)
@@ -128,7 +134,6 @@ struct ContentView: View {
                     })
                     .padding(.top, -400)
                     .padding(.leading, 260)
-                    
                 }
             }
         }
