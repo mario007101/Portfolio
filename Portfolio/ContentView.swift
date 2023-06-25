@@ -57,21 +57,37 @@ struct ContentView: View {
                             
                             //Plus in a hexagon
                             Path { path in
-                                path.move(to: CGPoint(x: 5, y: 20))
-                                path.addLine(to: CGPoint(x: 35, y: 20))
-                                path.move(to: CGPoint(x: 20, y: 35))
-                                path.addLine(to: CGPoint(x: 20, y: 5))
+                                path.move(to: CGPoint(x: 15, y: 150))
+                                path.addLine(to: CGPoint(x: 45, y: 150))
+                                path.move(to: CGPoint(x: 30, y: 135))
+                                path.addLine(to: CGPoint(x: 30, y: 165))
                             }
                             .stroke(Color.white, lineWidth: 4)
-                            .position(x: 23, y: 280)
-
+                            
+                            //White line on the right side
+                            Path { path in
+                                
+                                //Drawed circles
+                                var positionOfCircles = 220
+                                
+                                path.move(to: CGPoint(x: 50, y: 220))
+                                path.addLine(to: CGPoint(x: 50, y: 575))
+                                path.closeSubpath()
+                                
+                                for _ in 0..<8 {
+                                    path.addArc(center: CGPoint(x: 50, y: positionOfCircles), radius: 5, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
+                                    positionOfCircles += 50
+                                }
+                            }
+                            .stroke(Color.white, lineWidth: 4)
+                            
                         }
                         .frame(width: 300, height: 300, alignment: .leading)
                         .padding(.top, -189)
                         .padding(.leading, -30)
                     }
                 }
-            .frame(maxHeight: .infinity, alignment: .center)
+                .frame(maxHeight: .infinity, alignment: .center)
                 
                 //Fixed text and picture
                 VStack{
@@ -105,18 +121,21 @@ struct ContentView: View {
                                 .font(.largeTitle)
                         } else {
                             Image(systemName: "heart.fill")
-                                .foregroundColor(.red)
+                                .foregroundColor(.yellow)
                                 .font(.largeTitle)
                                 .shadow(color: .black, radius: 6.0)
                         }
                     })
                     .padding(.top, -400)
                     .padding(.leading, 260)
+                    
                 }
             }
         }
+        
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
