@@ -1,18 +1,11 @@
-//
-//  HexagonShape.swift
-//  Portfolio
-//
-//  Created by Mário Markovič on 24/06/2023.
-//
-
 import SwiftUI
 
 struct HexagonShape: View {
     var body: some View {
         Hexagon()
             .frame(width: 60, height: 60)
-            .opacity(0.5)
             .rotationEffect(.degrees(30))
+            .opacity(0.6)
     }
 }
 

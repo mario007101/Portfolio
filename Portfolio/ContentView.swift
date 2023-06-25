@@ -32,11 +32,11 @@ struct ContentView: View {
                             HexagonShape()
                                 .rotationEffect(.degrees(30))
                             HexagonShape()
+                                .foregroundColor(.red)
                             HexagonShape()
                                 .rotationEffect(.degrees(30))
-                                
                         }
-
+                        
                         HStack{
                             Image("Csharp_logo")
                                 .resizable()
@@ -51,6 +51,7 @@ struct ContentView: View {
                             Image("html_logo")
                                 .resizable()
                                 .frame(width: 60, height: 60)
+                            
                             //Plus in a hexagon
                             Path { path in
                                 path.move(to: CGPoint(x: 5, y: 20))
@@ -60,9 +61,6 @@ struct ContentView: View {
                             }
                             .stroke(Color.white, lineWidth: 4)
                             .position(x: 23, y: 280)
-
-
-
 
                         }
                         .frame(width: 300, height: 300, alignment: .leading)
