@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isClicked = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -24,6 +26,7 @@ struct ContentView: View {
                         
                         InformationAbout()
                             .padding(.top, -30)
+                            .frame(width: 360)
                         
                         //Container for hexagon shadows
                         HStack{
@@ -83,6 +86,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .position(x: 190, y: -315)
                         .frame(width: 80, height: 80)
+                    
                     Image("pictureOfHuman")
                         .resizable()
                         .scaledToFit()
@@ -91,6 +95,23 @@ struct ContentView: View {
                         .clipShape(Circle())
                         .padding(.leading, 300)
                         .padding(.top, -468)
+                    
+                    Button(action: {
+                        isClicked = true
+                    }, label: {
+                        if isClicked == false {
+                            Image(systemName: "heart")
+                                .foregroundColor(.red)
+                                .font(.largeTitle)
+                        } else {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.red)
+                                .font(.largeTitle)
+                                .shadow(color: .black, radius: 6.0)
+                        }
+                    })
+                    .padding(.top, -400)
+                    .padding(.leading, 260)
                 }
             }
         }
