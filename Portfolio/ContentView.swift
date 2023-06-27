@@ -4,6 +4,7 @@ struct ContentView: View {
     @State var isClicked = false
     
     var body: some View {
+        
         NavigationView {
             ZStack {
                 Image("space")
@@ -74,6 +75,7 @@ struct ContentView: View {
                 
                 //Fixed text and picture
                 VStack{
+                    
                     Text("Mário Markovič")
                         .bold()
                         .transparentText(color: .gray, lineWidth: 4)
@@ -114,8 +116,8 @@ struct ContentView: View {
                     
                     //Path for the line on the right side
                     Path { path in
-                        path.move(to: CGPoint(x: 360, y: 220))
-                        path.addLine(to: CGPoint(x: 360, y: 575))
+                        path.move(to: CGPoint(x: 360, y: 200))
+                        path.addLine(to: CGPoint(x: 360, y: 555))
                         path.closeSubpath()
                         
                     }
@@ -124,7 +126,7 @@ struct ContentView: View {
                     //Path for drawed circles on the line
                     let pathForCircles = Path { path in
                         
-                        var positionOfCircles = -80
+                        var positionOfCircles = -100
                         
                         for _ in 0..<8 {
                             path.addArc(center: CGPoint(x: 360, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
@@ -132,11 +134,21 @@ struct ContentView: View {
                         }
                     }
                     pathForCircles.fill(Color.yellow).overlay(pathForCircles.stroke(Color.black, lineWidth: 4))
-
+                    
+                    TabView {
+                            ContentView()
+                                .tabItem{
+                                    Image(systemName: "phone.fill")
+                                    Text("Call")
+                                }
+                        
+                        
+                    }
                 }
+    
             }
+            
         }
-        
     }
 }
 
