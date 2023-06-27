@@ -5,7 +5,7 @@ struct Call: View {
         NavigationView {
             Image("space")
                 .resizable()
-                .ignoresSafeArea()
+                .ignoresSafeArea()                
         }
     }
 }
