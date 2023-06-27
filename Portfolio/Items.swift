@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct Items: View {
     @State var isClicked = false
     
     var body: some View {
@@ -126,7 +126,7 @@ struct ContentView: View {
                     //Path for drawed circles on the line
                     let pathForCircles = Path { path in
                         
-                        var positionOfCircles = -100
+                        var positionOfCircles = -80
                         
                         for _ in 0..<8 {
                             path.addArc(center: CGPoint(x: 360, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
@@ -134,27 +134,17 @@ struct ContentView: View {
                         }
                     }
                     pathForCircles.fill(Color.yellow).overlay(pathForCircles.stroke(Color.black, lineWidth: 4))
-                    
-                    TabView {
-                            ContentView()
-                                .tabItem{
-                                    Image(systemName: "phone.fill")
-                                    Text("Call")
-                                }
-                        
-                        
-                    }
+                                        
                 }
-    
             }
-            
         }
     }
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct Items_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Items()
     }
 }
+
