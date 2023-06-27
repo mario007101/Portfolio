@@ -63,30 +63,7 @@ struct ContentView: View {
                                 path.addLine(to: CGPoint(x: 30, y: 165))
                             }
                             .stroke(Color.white, lineWidth: 4)
-                            
-                            //Path for the line on the right side
-                            Path { path in
-                                path.move(to: CGPoint(x: 50, y: 220))
-                                path.addLine(to: CGPoint(x: 50, y: 575))
-                                path.closeSubpath()
-                                
-                            }
-                            .stroke(Color.white, lineWidth: 4)
-                            
-                            //Path for drawed circles on the line
-                            let pathForCircles = Path { path in
-                                
-                                var positionOfCircles = 220
-                                
-                                for _ in 0..<8 {
-                                    path.addArc(center: CGPoint(x: 38, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
-                                    positionOfCircles += 50
-                                }
-                            }
-                            pathForCircles.fill(Color.yellow).overlay(pathForCircles.stroke(Color.black, lineWidth: 3))
-
-                            
-                            
+                                                                        
                         }
                         .frame(width: 300, height: 300, alignment: .leading)
                         .padding(.top, -189)
@@ -103,10 +80,10 @@ struct ContentView: View {
                         .mask(Color.white.opacity(0.9))
                         .font(.system(size: 35))
                         .padding(.horizontal, -170)
-                        .padding(.vertical, -330)
+                        .padding(.vertical, 0)
                     Circle()
                         .foregroundColor(.white)
-                        .position(x: 190, y: -315)
+                        .position(x: 190, y: -35)
                         .frame(width: 80, height: 80)
                     
                     Image("pictureOfHuman")
@@ -116,7 +93,7 @@ struct ContentView: View {
                         .frame(width: 70, height: 130)
                         .clipShape(Circle())
                         .padding(.leading, 300)
-                        .padding(.top, -468)
+                        .padding(.top, -188)
                     
                     Button(action: {
                         isClicked = true
@@ -132,8 +109,30 @@ struct ContentView: View {
                                 .shadow(color: .black, radius: 6.0)
                         }
                     })
-                    .padding(.top, -400)
+                    .padding(.top, -120)
                     .padding(.leading, 260)
+                    
+                    //Path for the line on the right side
+                    Path { path in
+                        path.move(to: CGPoint(x: 360, y: 220))
+                        path.addLine(to: CGPoint(x: 360, y: 575))
+                        path.closeSubpath()
+                        
+                    }
+                    .stroke(Color.white, lineWidth: 4)
+                    
+                    //Path for drawed circles on the line
+                    let pathForCircles = Path { path in
+                        
+                        var positionOfCircles = -80
+                        
+                        for _ in 0..<8 {
+                            path.addArc(center: CGPoint(x: 360, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
+                            positionOfCircles += 50
+                        }
+                    }
+                    pathForCircles.fill(Color.yellow).overlay(pathForCircles.stroke(Color.black, lineWidth: 4))
+
                 }
             }
         }
