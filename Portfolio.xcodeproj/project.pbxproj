@@ -16,6 +16,7 @@
 		CAA83D632A4B4445000CA3A5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA83D622A4B4445000CA3A5 /* MainView.swift */; };
 		CAA83D652A4B4469000CA3A5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA83D642A4B4469000CA3A5 /* Items.swift */; };
 		CAA83D672A4B44D4000CA3A5 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA83D662A4B44D4000CA3A5 /* Call.swift */; };
+		CAA83D6B2A4CB109000CA3A5 /* ListOfMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA83D6A2A4CB109000CA3A5 /* ListOfMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CAA83D622A4B4445000CA3A5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CAA83D642A4B4469000CA3A5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		CAA83D662A4B44D4000CA3A5 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		CAA83D6A2A4CB109000CA3A5 /* ListOfMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				CA0697832A310A6C0083E09E /* PortfolioApp.swift */,
 				CAA83D622A4B4445000CA3A5 /* MainView.swift */,
+				CAA83D6A2A4CB109000CA3A5 /* ListOfMessages.swift */,
 				CAA83D662A4B44D4000CA3A5 /* Call.swift */,
 				CAA83D642A4B4469000CA3A5 /* Items.swift */,
 				CAA83D5E2A4781BB000CA3A5 /* HexagonShape.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA83D6B2A4CB109000CA3A5 /* ListOfMessages.swift in Sources */,
 				CAA83D632A4B4445000CA3A5 /* MainView.swift in Sources */,
 				CA0697922A3111530083E09E /* TransparentText.swift in Sources */,
 				CA6042E82A4302EF00E721D9 /* InformationAbout.swift in Sources */,
