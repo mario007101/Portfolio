@@ -2,10 +2,10 @@ import SwiftUI
 
 struct Call: View {
     var body: some View {
-        NavigationView {
+        ZStack {
             Image("space")
                 .resizable()
-                .ignoresSafeArea()                
+                .ignoresSafeArea()
         }
     }
 }

@@ -5,12 +5,12 @@ struct Items: View {
     
     var body: some View {
         
-        NavigationView {
+        ZStack {
             ZStack {
                 Image("space")
                     .resizable()
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
                 
                 VStack {
                     ScrollView {
@@ -128,7 +128,7 @@ struct Items: View {
                         
                         var positionOfCircles = -80
                         
-                        for i in 0..<8 {                            
+                        for _ in 0..<8 {
                             path.addArc(center: CGPoint(x: 360, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
                             positionOfCircles += 50
                         }
