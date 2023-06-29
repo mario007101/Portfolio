@@ -1,16 +1,17 @@
 import SwiftUI
 
-struct Customers {
+struct Customers {    
+    var splitPerson = [
+        "Mark",
+        "Jon",
+        "Gery",
+        "Tony"
+    ]
     
-    var otherCustomer: String {
-        var splitPerson = [
-            "Mark",
-            "Jon",
-            "Gery"
-        ]
-            let firstCustomer = splitPerson[0]
-            splitPerson.removeFirst()
-            return firstCustomer
-    }
+    mutating func removeFirstCustomer() -> String {
+           let firstCustomer = splitPerson[0]
+           splitPerson.removeFirst()
+           return firstCustomer
+       }
 }
 

@@ -4,7 +4,6 @@ struct ListOfMessages: View {
     let uniqueCustomer: String
     let topColor: Color
     let bottomColor: Color
-
     
     var body: some View {
         ZStack {
@@ -38,6 +37,7 @@ struct ListOfMessages: View {
 
 struct ListOfMessages_Previews: PreviewProvider {
     static var previews: some View {
-        ListOfMessages(uniqueCustomer: Customers(otherCustomer), topColor: .black, bottomColor: .gray)
+        var customers = Customers()
+        ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)
     }
 }
