@@ -1,14 +1,10 @@
 import SwiftUI
 
 struct ListOfMessages: View {
-    let namesOfCustomers: [String] = [
-    "Mark",
-    "Jon",
-    "Gery",
-    ]
-    
+    let uniqueCustomer: String
     let topColor: Color
     let bottomColor: Color
+
     
     var body: some View {
         ZStack {
@@ -21,7 +17,7 @@ struct ListOfMessages: View {
             
             VStack {
                 HStack {
-                    Text(namesOfCustomers[0])
+                    Text(uniqueCustomer)
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.yellow)
@@ -39,8 +35,9 @@ struct ListOfMessages: View {
     }
 }
 
+
 struct ListOfMessages_Previews: PreviewProvider {
     static var previews: some View {
-        ListOfMessages(topColor: .black, bottomColor: .gray)
+        ListOfMessages(uniqueCustomer: Customers(otherCustomer), topColor: .black, bottomColor: .gray)
     }
 }
