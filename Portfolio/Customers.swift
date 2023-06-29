@@ -5,7 +5,9 @@ struct Customers {
         "Mark",
         "Jon",
         "Gery",
-        "Tony"
+        "Tony",
+        "Jake",
+        "Don"
     ]
     
     mutating func removeFirstCustomer() -> String {
