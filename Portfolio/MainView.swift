@@ -4,8 +4,8 @@ struct MainView: View {
     init() {
         let appearance = UITabBarAppearance()
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.yellow]
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.yellow]
-        appearance.stackedLayoutAppearance.normal.iconColor = .yellow
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.cyan]
+        appearance.stackedLayoutAppearance.normal.iconColor = .cyan
         UITabBar.appearance().standardAppearance = appearance
     }
     

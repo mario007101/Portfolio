@@ -19,9 +19,10 @@ struct Call: View {
                     ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)
                     ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)
                     ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)
+                    ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)
                 }
             }
-            .frame(width: .infinity, height: 565)
+            .frame(width: 390, height: 565)
             .padding(.top, -50)
         }
     }
