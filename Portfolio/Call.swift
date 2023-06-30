@@ -7,6 +7,11 @@ struct Call: View {
             Image("space")
                 .resizable()
                 .ignoresSafeArea()
+            Text("Messages")
+                .foregroundColor(.white)
+                .font(.largeTitle)
+                .bold()
+                .padding(.top, -355)
             ScrollView{
                 VStack(alignment: .leading) {
                     ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)

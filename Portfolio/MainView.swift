@@ -5,6 +5,7 @@ struct MainView: View {
         let appearance = UITabBarAppearance()
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.yellow]
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.yellow]
+        appearance.stackedLayoutAppearance.normal.iconColor = .yellow
         UITabBar.appearance().standardAppearance = appearance
     }
     
@@ -24,6 +25,12 @@ struct MainView: View {
                 }
                 .tag(1)
                 .badge(2)
+            
+            Browser()
+                .tabItem{
+                    Image(systemName: "globe")
+                    Text("Browse")
+                }.tag(2)
         }
         .tint(.yellow)
     }
