@@ -8,7 +8,7 @@ struct Call: View {
                 .resizable()
                 .ignoresSafeArea()
             Text("Messages")
-                .foregroundColor(.white)
+                .foregroundColor(.yellow)
                 .font(.largeTitle)
                 .bold()
                 .padding(.top, -355)
@@ -22,8 +22,8 @@ struct Call: View {
                     ListOfMessages(uniqueCustomer: customers.removeFirstCustomer(), topColor: .black, bottomColor: .gray)
                 }
             }
-            .frame(width: 390, height: 565)
-            .padding(.top, -50)
+            .frame(width: 390, height: 575)
+            .padding(.top, -20)
         }
     }
 }
