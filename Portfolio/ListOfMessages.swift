@@ -38,19 +38,22 @@ struct ListOfMessages: View {
             }
         }
         .fullScreenCover(isPresented: $isDetailViewPressed) {
-            DestinationView()
+            DestinationView(uniqueCustomer: uniqueCustomer)
         }
     }
 }
 
 struct DestinationView: View {
     @Environment(\.presentationMode) var presentationMode
+    let uniqueCustomer: String
     
     var body: some View {
-        ZStack(alignment: . topLeading){
+        ZStack(alignment: . topLeading) {
+            
             Image("space")
                 .resizable()
                 .ignoresSafeArea()
+            
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
@@ -60,10 +63,15 @@ struct DestinationView: View {
                     .padding(.leading, 30)
                     .padding(.top, 10)
             })
-            
 
+            Text(uniqueCustomer)
+                .foregroundColor(.yellow)
+                .font(.system(size: 40))
+                .bold()
+                .padding(.top, 70)
+                .padding(.leading, 30)
         }
-        
+    
     }
 }
     
