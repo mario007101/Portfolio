@@ -37,17 +37,33 @@ struct ListOfMessages: View {
                 }.padding(.top, -30)
             }
         }
-        .sheet(isPresented: $isDetailViewPressed) {
+        .fullScreenCover(isPresented: $isDetailViewPressed) {
             DestinationView()
         }
     }
 }
 
 struct DestinationView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text("This is the destination view")
-            .font(.largeTitle)
-            .bold()
+        ZStack(alignment: . topLeading){
+            Image("space")
+                .resizable()
+                .ignoresSafeArea()
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Image(systemName: "xmark")
+                    .foregroundColor(.yellow)
+                    .font(.largeTitle)
+                    .padding(.leading, 30)
+                    .padding(.top, 10)
+            })
+            
+
+        }
+        
     }
 }
     
