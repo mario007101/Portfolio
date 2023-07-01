@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct MainView: View {
+
     init() {
         let appearance = UITabBarAppearance()
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.yellow]
@@ -20,25 +21,25 @@ struct MainView: View {
             
             Call()
                 .tabItem {
-                    Image(systemName: "envelope")
+                    Image(systemName: "envelope") 
                     Text("Hit me up!")
                 }
                 .tag(1)
                 .badge(2)
             
             Browser()
-                .tabItem{
+                .tabItem {
                     Image(systemName: "globe")
                     Text("Browse")
-                }.tag(2)
+                }
+                .tag(2)
         }
         .tint(.yellow)
     }
 }
 
-struct TabItemA_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+       MainView()
     }
 }
-
