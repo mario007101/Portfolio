@@ -77,23 +77,26 @@ struct DestinationView: View {
                 .bold()
                 .padding(.top, 120)
                 .padding(.leading, 30)
+                .frame(width: 350)
         }
     }
     
     func makeRandomPhrase() -> String {
         let randomNumber = Int.random(in: 0...2)
         let makePhrase: String
+        let myName = "Mário"
         
         switch randomNumber {
-        case 0: makePhrase = "Hey \(uniqueCustomer) I'm so glad to see you"
-        case 1: makePhrase = "Hello \(uniqueCustomer) how are you today?"
-        case 2: makePhrase = "Eyo \(uniqueCustomer) what will we do today?"
-        default: makePhrase = "Hey \(uniqueCustomer) I'm so glad to see you here."
+        case 0: makePhrase = "Hey \(myName) I'm so glad that I had seen you out. Could we go on football match this evening? \n\nRegards,\n\(uniqueCustomer)"
+        case 1: makePhrase = "Hello \(myName) how are you? I haven't seen you for a long time. We should meet somewhere in town if you are down. \n\nAll the best,\n\(uniqueCustomer)"
+        case 2: makePhrase = "Eyo \(myName) what will we do today?"
+        default: makePhrase = "Hey \(myName) I'm so glad to see you here."
         }
         
         return makePhrase
     }
 }
+
     
 struct ListOfMessages_Previews: PreviewProvider {
     static var previews: some View {
