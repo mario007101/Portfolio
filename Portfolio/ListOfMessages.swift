@@ -70,8 +70,28 @@ struct DestinationView: View {
                 .bold()
                 .padding(.top, 70)
                 .padding(.leading, 30)
+            
+            Text(makeRandomPhrase())
+                .foregroundColor(.white)
+                .font(.system(size: 30))
+                .bold()
+                .padding(.top, 120)
+                .padding(.leading, 30)
         }
+    }
     
+    func makeRandomPhrase() -> String {
+        let randomNumber = Int.random(in: 0...2)
+        let makePhrase: String
+        
+        switch randomNumber {
+        case 0: makePhrase = "Hey \(uniqueCustomer) I'm so glad to see you"
+        case 1: makePhrase = "Hello \(uniqueCustomer) how are you today?"
+        case 2: makePhrase = "Eyo \(uniqueCustomer) what will we do today?"
+        default: makePhrase = "Hey \(uniqueCustomer) I'm so glad to see you here."
+        }
+        
+        return makePhrase
     }
 }
     
