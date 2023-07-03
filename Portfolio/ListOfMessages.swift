@@ -71,7 +71,7 @@ struct DestinationView: View {
                 .padding(.top, 70)
                 .padding(.leading, 30)
             
-            Text(makeRandomPhrase())
+            Text(makeRandomPhrase(randomNumber: Int.random(in: 0...2)))
                 .foregroundColor(.white)
                 .font(.system(size: 30))
                 .bold()
@@ -81,10 +81,10 @@ struct DestinationView: View {
         }
     }
     
-    func makeRandomPhrase() -> String {
-        let randomNumber = Int.random(in: 0...2)
+    func makeRandomPhrase(randomNumber: Int) -> String {
+        
         let makePhrase: String
-        let myName = "Mário"
+        var myName = "Mário"
         
         switch randomNumber {
         case 0: makePhrase = "Hey \(myName) I'm so glad that I had seen you out. Could we go on football match this evening? \n\nRegards,\n\(uniqueCustomer)"
@@ -93,7 +93,8 @@ struct DestinationView: View {
         default: makePhrase = "Hey \(myName) I'm so glad to see you here."
         }
         
-        return makePhrase
+        
+        return makePhrase 
     }
 }
 
