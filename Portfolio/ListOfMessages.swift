@@ -84,7 +84,7 @@ struct DestinationView: View {
     func makeRandomPhrase(randomNumber: Int) -> String {
         
         let makePhrase: String
-        var myName = "Mário"
+        let myName = "Mário"
         
         switch randomNumber {
         case 0: makePhrase = "Hey \(myName) I'm so glad that I had seen you out. Could we go on football match this evening? \n\nRegards,\n\(uniqueCustomer)"

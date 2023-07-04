@@ -30,7 +30,7 @@ struct MainView: View {
             Browser()
                 .tabItem {
                     Image(systemName: "globe")
-                    Text("Browse")
+                    Text("Browser")
                 }
                 .tag(2)
         }
