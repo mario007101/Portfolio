@@ -33,6 +33,11 @@ struct MainView: View {
                     Text("Browser")
                 }
                 .tag(2)
+            MoreInfo()
+                .tabItem {
+                Image(systemName: "ellipsis")
+                Text("More")
+                }.tag(3)
         }
         .tint(.yellow)
     }

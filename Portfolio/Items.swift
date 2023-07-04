@@ -116,8 +116,8 @@ struct Items: View {
                     
                     //Path for the line on the right side
                     Path { path in
-                        path.move(to: CGPoint(x: 360, y: 200))
-                        path.addLine(to: CGPoint(x: 360, y: 555))
+                        path.move(to: CGPoint(x: 380, y: 180))
+                        path.addLine(to: CGPoint(x: 380, y: 535))
                         path.closeSubpath()
                         
                     }
@@ -126,10 +126,10 @@ struct Items: View {
                     //Path for drawed circles on the line
                     let pathForCircles = Path { path in
                         
-                        var positionOfCircles = -80
+                        var positionOfCircles = -100
                         
                         for _ in 0..<8 {
-                            path.addArc(center: CGPoint(x: 360, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
+                            path.addArc(center: CGPoint(x: 380, y: positionOfCircles), radius: 8, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
                             positionOfCircles += 50
                         }
                     }
