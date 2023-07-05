@@ -70,7 +70,7 @@ struct Items: View {
                         .padding(.top, -189)
                         .padding(.leading, -30)
                         DonutChart()
-                            .padding(.top, -100)
+                            .padding(.top, -130)
                     }
                 }
                 .frame(maxHeight: .infinity, alignment: .center)
