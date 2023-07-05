@@ -69,6 +69,8 @@ struct Items: View {
                         .frame(width: 300, height: 300, alignment: .leading)
                         .padding(.top, -189)
                         .padding(.leading, -30)
+                        DonutChart()
+                            .padding(.top, -100)
                     }
                 }
                 .frame(maxHeight: .infinity, alignment: .center)
