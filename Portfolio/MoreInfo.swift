@@ -8,19 +8,22 @@ struct Bookmark: Identifiable {
 }
 
 struct MoreInfo: View {
-    let information: [Bookmark] = [.drivingLicense, .hobby, .example3]
+    let information: [Bookmark] = [.drivingLicense, .hobby, .languages]
     
     var body: some View {
         ZStack{
             List(information, children: \.items) { row in
                 Image(systemName: row.icon)
+                    .foregroundColor(.cyan)
+                    .bold()
                 Text(row.name)
             }.environment(\.defaultMinListRowHeight, 50)
              .environment(\.defaultMinListHeaderHeight, 45)
              .scrollContentBackground(.hidden)
-             .background() { Image("space")
-                               .resizable()
-                               .edgesIgnoringSafeArea(.all)
+             .background() {
+                 Image("space")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
             }
         }.navigationTitle("More information")
     }
@@ -44,8 +47,13 @@ extension Bookmark {
     static let cycling = Bookmark(name: "Cycling", icon: "bicycle")
     static let swimming = Bookmark(name: "Swimming", icon: "figure.pool.swim")
     
+    //Third List
+    static let english = Bookmark(name: "English", icon: "globe")
+    static let slovak = Bookmark(name: "Slovak", icon: "globe")
+    static let german = Bookmark(name: "German", icon: "globe")
+    static let czech = Bookmark(name: "Czech", icon: "globe")
+    
     static let drivingLicense = Bookmark(name: "Driving License", icon: "car.circle", items: [Bookmark.B, Bookmark.B1, Bookmark.AM])
     static let hobby = Bookmark(name: "Hobby", icon: "dumbbell", items: [Bookmark.football, Bookmark.basketball, Bookmark.cycling, Bookmark.swimming])
-    
-    static let example3 = Bookmark(name: "Driving License", icon: "hand.thumbsup", items: [Bookmark.B, Bookmark.B1])
+    static let languages = Bookmark(name: "Languages", icon: "globe.europe.africa", items: [Bookmark.english, Bookmark.slovak, Bookmark.german, Bookmark.czech])
 }
