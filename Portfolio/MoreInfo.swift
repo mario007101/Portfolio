@@ -14,10 +14,13 @@ struct MoreInfo: View {
         ZStack{
             List(information, children: \.items) { row in
                 Image(systemName: row.icon)
-                    .foregroundColor(.cyan)
+                    .foregroundColor(.yellow)
                     .bold()
                 Text(row.name)
-            }.environment(\.defaultMinListRowHeight, 50)
+                    .bold()
+            }
+            .padding(.top, 50)
+             .environment(\.defaultMinListRowHeight, 50)
              .environment(\.defaultMinListHeaderHeight, 45)
              .scrollContentBackground(.hidden)
              .background() {
@@ -25,7 +28,12 @@ struct MoreInfo: View {
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
             }
-        }.navigationTitle("More information")
+            Text("More information")
+                .foregroundColor(.yellow)
+                .bold()
+                .font(.largeTitle)
+                .padding(.top, -340)
+        }
     }
 }
 

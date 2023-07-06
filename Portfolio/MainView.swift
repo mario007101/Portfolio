@@ -16,23 +16,20 @@ struct MainView: View {
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
-                }
-                .tag(0)
+                }.tag(0)
             
             Call()
                 .tabItem {
                     Image(systemName: "envelope") 
                     Text("Hit me up!")
-                }
-                .tag(1)
-                .badge(2)
+                }.tag(1)
+                 .badge(2)
             
             Browser()
                 .tabItem {
                     Image(systemName: "globe")
                     Text("Browser")
-                }
-                .tag(2)
+                }.tag(2)
             
             MoreInfo()
                 .tabItem {
