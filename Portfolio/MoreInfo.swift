@@ -54,6 +54,7 @@ extension Bookmark {
     static let basketball = Bookmark(name: "Basketball", icon: "basketball.fill")
     static let cycling = Bookmark(name: "Cycling", icon: "bicycle")
     static let swimming = Bookmark(name: "Swimming", icon: "figure.pool.swim")
+    static let programming = Bookmark(name: "Programming", icon: "display.2")
     
     //Third List
     static let english = Bookmark(name: "English", icon: "globe")
@@ -67,7 +68,7 @@ extension Bookmark {
     static let cncOperator = Bookmark(name: "CNC Operator", icon: "figure.walk.diamond")
     
     static let drivingLicense = Bookmark(name: "Driving License", icon: "car.circle", items: [Bookmark.B, Bookmark.B1, Bookmark.AM])
-    static let hobby = Bookmark(name: "Hobby", icon: "dumbbell", items: [Bookmark.football, Bookmark.basketball, Bookmark.cycling, Bookmark.swimming])
+    static let hobby = Bookmark(name: "Hobby", icon: "dumbbell", items: [Bookmark.football, Bookmark.basketball, Bookmark.cycling, Bookmark.swimming, Bookmark.programming])
     static let languages = Bookmark(name: "Languages", icon: "globe.europe.africa", items: [Bookmark.english, Bookmark.slovak, Bookmark.german, Bookmark.czech])
     static let education = Bookmark(name: "Education", icon: "book.closed.fill", items: [Bookmark.electrician, Bookmark.programmer, Bookmark.cncOperator])
 }
