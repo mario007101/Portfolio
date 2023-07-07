@@ -70,5 +70,5 @@ extension Bookmark {
     static let drivingLicense = Bookmark(name: "Driving License", icon: "car.circle", items: [Bookmark.B, Bookmark.B1, Bookmark.AM])
     static let hobby = Bookmark(name: "Hobby", icon: "dumbbell", items: [Bookmark.football, Bookmark.basketball, Bookmark.cycling, Bookmark.swimming, Bookmark.programming])
     static let languages = Bookmark(name: "Languages", icon: "globe.europe.africa", items: [Bookmark.english, Bookmark.slovak, Bookmark.german, Bookmark.czech])
-    static let education = Bookmark(name: "Education", icon: "book.closed.fill", items: [Bookmark.electrician, Bookmark.programmer, Bookmark.cncOperator])
+    static let education = Bookmark(name: "Abilities", icon: "book.closed.fill", items: [Bookmark.electrician, Bookmark.programmer, Bookmark.cncOperator])
 }
